@@ -7,7 +7,7 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL} >
         <Switch>
           <Route path="/" component={Landing} exact />
           <Route path="/projects" component={Projects} exact />
