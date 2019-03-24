@@ -18,7 +18,11 @@ class Landing extends Component {
     futureWork: '',
     gitLink: '',
     members: '',
-    projImage: ''
+    projImage: '',
+    openSnackbar: false,
+    msgSnackbar: '',
+    vertical: 'top',
+    horizontal: 'center'
   }
   handleChange = name => event => {
     if(name==='projImg' && event.target.files) {
@@ -39,6 +43,10 @@ class Landing extends Component {
     console.log(event);
   }
 
+  onClose = () => {
+		this.setState({openSnackbar: false});
+	}
+
   submit = (e) => {
     e.preventDefault();
     let form = new FormData();
@@ -58,14 +66,25 @@ class Landing extends Component {
     // };
     axios.post(`${BASE_URL}/addProject`, form)
     .then(resp=> {
-      console.log(resp);
+      let data = resp.data;
+      console.log(data);
+      if(data.success===false) {
+        this.setState({openSnackbar: true, msgSnackbar: data.message});
+      }
+      else if(data.success) {
+        this.setState({openSnackbar: true, 
+          msgSnackbar: 'Congratulations! You have submitted successfully!'})
+      }
     })
     .catch(err=> {
       console.log(err);
+      this.setState({openSnackbar: true, 
+      msgSnackbar: 'Please check your internet connection and try again!'});
     })
   }
 
   render() {
+    let {vertical, horizontal} = this.state;
     return (
       <div>
         <Topbar />
@@ -143,18 +162,15 @@ class Landing extends Component {
                 onChange={this.handleChange('gitLink')}
                 margin="normal"
               />
-              <div className="single-line">
-                <TextField
-                  label="Team Members"
-                  multiline
-                  spellcheck={false}
-                  value={this.state.members}
-                  style={{width: '75%'}}
-                  onChange={this.handleChange('members')}
-                  margin="normal"
-                />
-                <button className="add-member">Add Member +</button>
-              </div>
+              <TextField
+                label="Team Members"
+                multiline
+                placeholder="(Member1,Member2,...)"
+                spellcheck={false}
+                value={this.state.members}
+                onChange={this.handleChange('members')}
+                margin="normal"
+              />
               <div className="proj-img">
                 <input type='file'
                   id="proj-img"
@@ -164,8 +180,8 @@ class Landing extends Component {
                   multiple="false"
                   onChange={this.handleChange('projImg')}
                  />
-                <span id='val'>Add Project Image</span>
-                <span id='file-btn' onClick={this.imgBtnClicked}>Choose Image</span>
+                <span id='val'>Select Project Image</span>
+                {/* <span id='file-btn' onClick={this.imgBtnClicked}>Choose Image</span> */}
               </div>
               <button type="submit" className="submit-btn">SUBMIT</button>
             </form>
@@ -180,6 +196,13 @@ class Landing extends Component {
             <div><button className="view-btn" onClick={()=> this.props.history.push('/projects')}>VIEW</button></div>
           </Grid>
         </Grid>
+        <Snackbar
+          anchorOrigin={{ vertical, horizontal }}
+          open={this.state.openSnackbar}
+          message={this.state.msgSnackbar}
+          autoHideDuration={4000}
+          onClose={this.onClose}
+        />
       </div>
     )
   }
