@@ -13,13 +13,13 @@ const Project = (props) => {
           <h4>Challenge Faced</h4>
           <p>{props.challenges}</p>
         </Grid>
-        <Grid item md={6} xs={12}>
+        <Grid item md={5} xs={12} className="right-col-pr">
           <h4>Technical Stack</h4>
           <p>{props.techStack}</p>
           <h4>Future Work</h4>
           <p>{props.futureWork}</p>
           <h4>Github Link</h4>
-          <p>{props.github}</p>
+          <p>{props.gitLink}</p>
           <h4>Team</h4>
           <p>{props.team}</p>
         </Grid>

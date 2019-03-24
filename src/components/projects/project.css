@@ -11,7 +11,8 @@
     padding: 15px 0 15px 10px;
     cursor: pointer;
 }
-.tracks li:hover {
+
+.tracks li:hover, .tracks li.active {
     background-color: #fff;
     color: #2DD585;
 }
@@ -47,6 +48,10 @@
     margin-top: 20vh;
 }
 
+.right-col-pr {
+    margin-left: 20px !important;
+}
+
 @media only screen and (max-width: 959px) {
     .project-content {
         margin-left: 0 !important;
@@ -54,6 +59,9 @@
     }
     .loader-div {
         margin-top: 0;
+    }
+    .right-col-pr {
+        margin-left: 0 !important;
     }
 }
 

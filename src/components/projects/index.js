@@ -14,7 +14,7 @@ class Projects extends Component {
     this.state = {
       track: 'construction',
       projects: '',
-      loading: false
+      loading: true
     }
     this.getProjects('construction');
   }
@@ -25,9 +25,9 @@ class Projects extends Component {
     this.setState({loading: true});
     axios.post(`${BASE_URL}/getProject`, {track: track})
     .then(resp=> {
-      console.log('hi');
+      // console.log('hi');
       let data = resp.data;
-      console.log(data);
+      // console.log(data);
       this.setState({projects: data.data, loading: false});
     }).
     catch(err=> {
@@ -38,7 +38,7 @@ class Projects extends Component {
   handleTrack = name => event => {
     this.getProjects(name);
     this.setState({track: name});
-    console.log(event.target.classList);
+    // console.log(event.target.classList);
   }
   render() {
     let {track, projects, loading} = this.state;
@@ -49,14 +49,22 @@ class Projects extends Component {
           <Grid item lg={3} md={3} xs={12}>
             <div className="tracks">
               <ul>
-                <li onClick={this.handleTrack('construction')}>Construction</li>
-                <li onClick={this.handleTrack('defence')}>Defence</li>
-                <li onClick={this.handleTrack('devops')}>DevOps</li>
-                <li onClick={this.handleTrack('health')}>Health & Fitness</li>
-                <li onClick={this.handleTrack('data')}>Data Integrity</li>
-                <li onClick={this.handleTrack('education')}>Education</li>
-                <li onClick={this.handleTrack('travel')}>Recreation & Travel</li>
-                <li onClick={this.handleTrack('disabilities')}>People with Disabilities</li>
+                <li onClick={this.handleTrack('construction')} 
+                className={track==='construction'?'active':''}>Construction</li>
+                <li onClick={this.handleTrack('defence')}
+                className={track==='defence'?'active':''}>Defence</li>
+                <li onClick={this.handleTrack('devops')}
+                className={track==='devops'?'active':''}>DevOps</li>
+                <li onClick={this.handleTrack('health')}
+                className={track==='health'?'active':''}>Health & Fitness</li>
+                <li onClick={this.handleTrack('data')}
+                className={track==='data'?'active':''}>Data Integrity</li>
+                <li onClick={this.handleTrack('education')}
+                className={track==='education'?'active':''}>Education</li>
+                <li onClick={this.handleTrack('travel')}
+                className={track==='travel'?'active':''}>Recreation & Travel</li>
+                <li onClick={this.handleTrack('disability')}
+                className={track==='disability'?'active':''}>People with Disabilities</li>
               </ul>
             </div>
           </Grid>

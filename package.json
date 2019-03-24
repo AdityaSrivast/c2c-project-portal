@@ -1,6 +1,6 @@
 {
   "name": "c2c-project-portal",
-  "homepage": "https://c2cprojects.acmvit.in",
+  "homepage": "https://c2cprojects.acmvit.in/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

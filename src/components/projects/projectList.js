@@ -20,7 +20,7 @@ class ProjectList extends Component {
   render() {
     let {projects} = this.props;
     let showProjects=[];
-    console.log(projects.length);
+    // console.log(projects.length);
     for(let i=0;i<projects.length;i++) {
       let project = projects[i];
       let showProject = (
@@ -37,7 +37,7 @@ class ProjectList extends Component {
       );
       showProjects.push(showProject);
     }
-    console.log(showProjects.length);
+    // console.log(showProjects.length);
       return (
         <div className="">
           {/* <CircularProgress className="theme-color" /> */}

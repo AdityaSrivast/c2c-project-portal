@@ -40,7 +40,7 @@ class Landing extends Component {
     let event = new Event('click');
     elem.dispatchEvent(event);
     this.handleChange('projImg');
-    console.log(event);
+    // console.log(event);
   }
 
   onClose = () => {
@@ -67,7 +67,7 @@ class Landing extends Component {
     axios.post(`${BASE_URL}/addProject`, form)
     .then(resp=> {
       let data = resp.data;
-      console.log(data);
+      // console.log(data);
       if(data.success===false) {
         this.setState({openSnackbar: true, msgSnackbar: data.message});
       }
