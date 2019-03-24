@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {Route, BrowserRouter, Switch} from 'react-router-dom';
 import Landing from './components/landing';
+import Projects from './components/projects';
 import './App.css';
 
 class App extends Component {
@@ -8,7 +9,8 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route path="/" component={Landing} />
+          <Route path="/" component={Landing} exact />
+          <Route path="/projects" component={Projects} exact />
         </Switch>
       </BrowserRouter>
     );

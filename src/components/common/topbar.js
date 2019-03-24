@@ -5,7 +5,7 @@ const Topbar = () => {
   return (
     <nav>
       <div>
-        <span className="theme-color">C2C</span>&nbsp;&nbsp;&nbsp;
+        <span className="theme-color" style={{fontWeight: 'bold'}}>C2C</span>&nbsp;&nbsp;&nbsp;
         <span style={{color: '#fff'}}>Projects</span>
       </div>
     </nav>
@@ -13,3 +13,4 @@ const Topbar = () => {
 }
 
 export default Topbar;
+

@@ -24,42 +24,31 @@
   font-style: normal;
   font-display: swap;
 }
-
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'CircularStd-Book';
-  /* background: url('./img/bg.svg'); */
   background: url('./img/bg1.svg');
-  background-color: rgb(48,48,48);
-  /* background-repeat:no-repeat; */
+  background-color: #1E1E1E;
   min-height: 100vh;
-  min-width: 100vw;
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* min-width:  */
-  /* background-size: cover; */
-  /* background-position: center; */
-  /* background-size: cover; */
+  font-family: 'CircularStd-Book';
 }
-
+button {
+  font-family: 'CircularStd-Bold';
+}
 h1,h2,h3,h4,h5,h6 {
   font-family: 'CircularStd-Bold';
 }
-
+label, textarea, select, option {
+  font-family: 'CircularStd-Book' !important;
+}
 .theme-color {
-  color: #1EB76E;
+  color: #1EB76E !important;
 }
 
 .theme-bg {
   background-color: #1EB76E;
 }
+.color-white {
+  color: #fff;
+}
 
-form label {
-  color: #707070 !important;
-}
-form>div>div::after {
-  border-bottom: 2px solid #707070;
-}
+
 

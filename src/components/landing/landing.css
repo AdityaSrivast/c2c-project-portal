@@ -1,0 +1,131 @@
+form {
+    background-color: #fff;
+    padding: 1rem;
+    padding-bottom: 4rem;
+    /* margin-left:     ; */
+}
+form label {
+    color: #707070 !important;
+}
+form>div {
+    width: 100%;
+}
+form>div>div, .single-line>div>div {
+    border-bottom: 1px solid #707070;
+}
+form>div>div::after, .single-line>div>div::after {
+    border-bottom: 1px solid #707070 !important;
+}
+form>div>div::before, .single-line>div>div::before {
+    border-bottom: none;
+}
+
+form textarea {
+    color: #707070 !important;
+    width: 100% !important;
+}
+.track {
+    padding: 10px !important;
+    background-color: #f0f0f0;
+    color: #707070;
+    outline: none;
+    height: min-content;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    margin-top: 26px;
+}
+.single-line {
+    display: flex;
+}
+.single-line select, .single-line button {
+    margin-left: 10px;
+    /* width: 30% */
+}
+.add-member {
+    padding: 10px !important;
+    background-color: #f0f0f0;
+    color: #707070;
+    outline: none;
+    height: min-content;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    margin-top: 26px;
+    border: 1px solid #707070;
+}
+.proj-img {
+    /* width: 400px; */
+    margin-top: 20px;
+    height: 35px;
+    background-color: white;
+    /* box-shadow: 1px 2px 3px #ededed; */
+    position:relative;
+    border-bottom: 2px solid #707070;
+    /* display: flex; */
+    width: 100%;
+    /* padding: 10px; */
+}
+#val {
+    width: 100%;
+    height:35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size:13px;
+    line-height: 35px;
+    text-indent: 10px;
+    pointer-events: none;
+    color: #707070;
+    font-size: 16px;
+}
+#file-btn {
+    cursor: pointer;
+    display: block;
+    /* width: 90px; */
+    padding: 0 5px;
+    height:35px;
+    color: white;
+    position: absolute;
+    right:0;
+    top: 0;
+    font-size: 16px;
+    line-height:35px;
+    text-align: center;
+    background-color: #f0f0f0;
+    color: #707070;
+    outline: none;
+    border: 1px solid #707070;
+    margin-left: 5px;
+}
+input[type="file"] {
+    width: 100%;
+    opacity: 0;
+    height: 35px;
+    cursor: pointer;
+}
+
+.right-text {
+    margin-top: 20vh !important;
+    text-align: center;
+}
+.view-btn, .submit-btn {
+    background: #1EB76E;
+    color: #fff;
+    padding: 12px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #fff;
+    cursor: pointer;
+    outline: none;
+}
+.view-btn:hover, .submit-btn:hover {
+    border: 1px solid #1EB76E;
+    transition: ease-in .2s;
+}
+
+.submit-btn {
+    padding: 10px 25px;
+    position: absolute;
+    margin-top: 2.5rem;
+    text-align: right;
+}
+
