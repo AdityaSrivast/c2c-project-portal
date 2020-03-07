@@ -1,5 +1,5 @@
 let urls = {
-  BASE_URL: 'https://guarded-reef-95895.herokuapp.com'
+  BASE_URL: 'https://projectsapi.acmvit.in'
 }
 
 export default urls;
