@@ -90,7 +90,7 @@ class Landing extends Component {
         <Topbar />
         <Grid container >
           <Grid item lg={4} md={5} xs={12}>
-            <form onSubmit={this.submit} style={{marginLeft: '3rem'}}>
+            <form onSubmit={this.submit}>
               <TextField
                 id="standard-name"
                 label="Project Name"
@@ -107,7 +107,7 @@ class Landing extends Component {
                   spellcheck={false}
                   value={this.state.statement}
                   onChange={this.handleChange('statement')}
-                  style={{width: '75%'}}
+                  className="single-line-input"
                   margin="normal"
                 />
                 <select className="track" onChange={this.handleChange('track')}>

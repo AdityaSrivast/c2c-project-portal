@@ -2,13 +2,16 @@ form {
     background-color: #fff;
     padding: 1rem;
     padding-bottom: 4rem;
-    /* margin-left:     ; */
+    margin-left: 3rem;
 }
 form label {
     color: #707070 !important;
 }
 form>div {
     width: 100%;
+}
+.single-line-input {
+    width: 75% !important;
 }
 form>div>div, .single-line>div>div {
     border-bottom: 1px solid #707070;
@@ -127,5 +130,22 @@ input[type="file"] {
     position: absolute;
     margin-top: 2.5rem;
     text-align: right;
+}
+
+@media only screen and (max-width: 959px) {
+    form {
+        margin-left: 0;
+    }
+    .single-line-input {
+        width: 100% !important;
+    }
+    .single-line {
+        display: block;
+    }
+    .single-line select {
+        width: 100%;
+        margin-left: 0;
+        padding: 10px;
+    }
 }
 
