@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Grid, CircularProgress} from '@material-ui/core';
+import {NavLink} from "react-router-dom";
 import Topbar from '../common/topbar';
 import ProjectsList from './projectList';
 import axios from 'axios';
@@ -12,11 +13,11 @@ class Projects extends Component {
   constructor() {
     super();
     this.state = {
-      track: 'construction',
+      track: 'defence',
       projects: '',
       loading: true
     }
-    this.getProjects('construction');
+    this.getProjects('defence');
   }
 
   getProjects = (track) => {
@@ -27,7 +28,7 @@ class Projects extends Component {
     .then(resp=> {
       // console.log('hi');
       let data = resp.data;
-      // console.log(data);
+      console.log(data);
       this.setState({projects: data.data, loading: false});
     }).
     catch(err=> {
@@ -45,13 +46,14 @@ class Projects extends Component {
     return (
       <div style={{padding: '2rem'}}>
         <Topbar/>
+        <NavLink className="navlink" to="/">&lt;&nbsp;Go Back</NavLink>
         <Grid container>
           <Grid item lg={3} md={3} xs={12}>
             <div className="tracks">
               <ul>
                 <li onClick={this.handleTrack('defence')} 
                 className={track==='defence'?'active':''}>Defence</li>
-                <li onClick={this.handleTrack('defence')}
+                <li onClick={this.handleTrack('dm')}
                 className={track==='dm'?'active':''}>Disaster Mitigation</li>
                 <li onClick={this.handleTrack('space')}
                 className={track==='space'?'active':''}>Space</li>

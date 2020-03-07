@@ -49,6 +49,11 @@ label, textarea, select, option {
 .color-white {
   color: #fff;
 }
-
+.navlink {
+  color: #1EB76E;
+  font-size: 1.5rem;
+  text-decoration: none;
+  bottom: 20px;
+}
 
 
