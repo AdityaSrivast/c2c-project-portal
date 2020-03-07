@@ -49,22 +49,22 @@ class Projects extends Component {
           <Grid item lg={3} md={3} xs={12}>
             <div className="tracks">
               <ul>
-                <li onClick={this.handleTrack('construction')} 
-                className={track==='construction'?'active':''}>Construction</li>
-                <li onClick={this.handleTrack('defence')}
+                <li onClick={this.handleTrack('defence')} 
                 className={track==='defence'?'active':''}>Defence</li>
-                <li onClick={this.handleTrack('devops')}
-                className={track==='devops'?'active':''}>DevOps</li>
-                <li onClick={this.handleTrack('health')}
-                className={track==='health'?'active':''}>Health & Fitness</li>
-                <li onClick={this.handleTrack('data')}
-                className={track==='data'?'active':''}>Data Integrity</li>
-                <li onClick={this.handleTrack('education')}
-                className={track==='education'?'active':''}>Education</li>
-                <li onClick={this.handleTrack('travel')}
-                className={track==='travel'?'active':''}>Recreation & Travel</li>
-                <li onClick={this.handleTrack('disability')}
-                className={track==='disability'?'active':''}>People with Disabilities</li>
+                <li onClick={this.handleTrack('defence')}
+                className={track==='dm'?'active':''}>Disaster Mitigation</li>
+                <li onClick={this.handleTrack('space')}
+                className={track==='space'?'active':''}>Space</li>
+                <li onClick={this.handleTrack('socialTransformation')}
+                className={track==='socialTransformation'?'active':''}>Social Transformation</li>
+                <li onClick={this.handleTrack('visIntl')}
+                className={track==='visIntl'?'active':''}>Vision Intelligence</li>
+                <li onClick={this.handleTrack('construction')}
+                className={track==='construction'?'active':''}>Construction</li>
+                <li onClick={this.handleTrack('women')}
+                className={track==='women'?'active':''}>Women in Tech</li>
+                <li onClick={this.handleTrack('fintech')}
+                className={track==='fintech'?'active':''}>Fintech</li>
               </ul>
             </div>
           </Grid>

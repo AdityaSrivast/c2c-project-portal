@@ -112,14 +112,14 @@ class Landing extends Component {
                 />
                 <select className="track" onChange={this.handleChange('track')}>
                   <option value="">Select Track</option>
-                  <option value="construction">Construction</option>
                   <option value="defence">Defence</option>
-                  <option value="devops">DevOps</option>
-                  <option value="health">Health & Fitness</option>
-                  <option value="data">Data Integrity</option>
-                  <option value="education">Education</option>
-                  <option value="travel">Recreation & Travel</option>
-                  <option value="disability">People with Disabilities</option>
+                  <option value="dm">Disaster Mitigation</option>
+                  <option value="space">Space</option>
+                  <option value="socialTransformation">Social Transformation</option>
+                  <option value="visIntl">Vision Intelligence</option>
+                  <option value="construction">Construction</option>
+                  <option value="women">Women in Tech</option>
+                  <option value="fintech">Fintech</option>
                 </select>
               </div>
               <TextField
